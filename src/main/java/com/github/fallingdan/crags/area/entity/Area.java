@@ -1,4 +1,4 @@
-package com.github.fallingdan.crags.climb.entity;
+package com.github.fallingdan.crags.area.entity;
 
 import java.time.Instant;
 import java.util.UUID;
@@ -22,43 +22,16 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "CLIMB")
-public class Climb {
+@Table(name = "AREA")
+public class Area {
 
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(name = "ROUTE_ID")
-    private UUID routeId;
-
-    @Column(name = "BLACK_POINT")
-    private boolean blackPoint;
-
-    @Column(name = "RED_POINT")
-    private boolean redPoint;
-
-    @Column(name = "FLASH")
-    private boolean flash;
-
-    @Column(name = "ON_SIGHT")
-    private boolean onSight;
-
-    @Column(name = "NOTES")
-    private String notes;
-
-    @Column(name = "BLACK_POINT_DATE")
-    private Instant blackPointDate;
-
-    @Column(name = "RED_POINT_DATE")
-    private Instant redPointDate;
-
-    @Column(name = "FLASH_DATE")
-    private Instant flashDate;
-
-    @Column(name = "ON_SIGHT_DATE")
-    private Instant onSightDate;
+    @Column(name = "NAME")
+    private String name;
 
     @UpdateTimestamp
     @Column(name = "UPDATED_DATE")
